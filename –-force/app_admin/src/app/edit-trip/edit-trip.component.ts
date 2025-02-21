@@ -7,7 +7,7 @@ import { Trip } from '../models/trip';
 
 @Component({
     selector: 'app-edit-trip',
-    standalone: true,
+    //standalone: true,
     imports: [CommonModule, ReactiveFormsModule],
     templateUrl: './edit-trip.component.html',
     styleUrl: './edit-trip.component.css'
@@ -30,7 +30,7 @@ export class EditTripComponent implements OnInit {
     // Retrieve stashed trip ID
     let tripCode = localStorage.getItem("tripCode");
     if (!tripCode) {
-      alert("Something wrong, couldn’t find where I stashed tripCode!");
+      alert("Something wrong, could not find where I stashed tripCode!");
         this.router.navigate(['']);
         return;
     }
@@ -81,7 +81,7 @@ export class EditTripComponent implements OnInit {
         .subscribe({
           next: (value: any) => {
             console.log(value);
-            this.router.navigate(['']);
+            this.router.navigate(['list-trips']);
           },
           error: (error: any) => {
             console.log('Error: ' + error);
