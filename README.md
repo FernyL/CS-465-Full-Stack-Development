@@ -12,7 +12,7 @@ Functionality:
 How is JSON different from Javascript and how does JSON tie together the frontend and backend development pieces?
 Provide an instance in the full stack process when you refactored code to improve functionality and efficiencies, and name the benefits that come from reusable user interface (UI) components.
 
-Javascript, along with HTML and CSS, is a programming language used in the development of most websites. JSON (JavaScript Object Notation) on the other hand is a data format that allows for the storage and exchange of data between systems and applications. This allows data to be stored and exchanged between the frontend and backend of the application along with the use of APIs. One instance in which we refactored code to improve the functionality and efficiencies is when we took the static HTML site and moved it to dynamic JSON by using the handlebars templating engine. This allows for reuseable templates, reduces redundancy, and improves code readability.   
+Javascript, along with HTML and CSS, is a programming language used in the development of most websites. JSON (JavaScript Object Notation) on the other hand is a data format that allows for the storage and exchange of data between systems and applications. This allows data to be stored and exchanged between the frontend and backend of the application along with the use of APIs. One instance in which we refactored code to improve the functionality and efficiencies is when we took the static HTML site and moved it to dynamic JSON by using the handlebars templating engine. This allows for reusable templates, reduces redundancy, and improves code readability.   
 
 Testing:
 
