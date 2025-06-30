@@ -1,5 +1,5 @@
 import { Injectable, Inject } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 import { Trip } from '../models/trip';
@@ -34,6 +34,20 @@ export class TripDataService {
     //console.log('InsideTripDataService::addTrips');
     return this.http.put<Trip>(this.url + '/' + formData.code, formData);
   }
+
+  deleteTrip(tripCode:string) : Observable<Trip[]> {
+    return this.http.delete<Trip[]>(this.url + '/' + tripCode);
+  }
+  //deleteTrip(tripCode:string) : Observable<Trip> {
+  //  return this.http.request<Trip>('delete', this.url + '/' + tripCode);
+  //}
+  //deleteTrip(tripCode: string): Observable<any>{
+  //    return this.http.post(this.url + '/' + tripCode, tripCode, {
+  //    headers: new HttpHeaders ({
+   //     "Authorization": `Bearer ${this.storage.getItem('travlr-token')}`
+  //  })
+  //});
+//};
 
   private handleError(error:any): Promise<any> {
     console.error('Something has gone wrong', error);
